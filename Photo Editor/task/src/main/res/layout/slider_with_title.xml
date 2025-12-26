@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/slrBright"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtBright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_brightness"
+            android:gravity="center"
+            android:width="70dp"
+            android:layout_marginEnd="16dp"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slBrightness"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:stepSize="10.0"
+            android:valueFrom="-250.0"
+            android:valueTo="250.0"
+            android:value="0.0"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/slrContast"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/slrBright"
+        app:layout_constraintVertical_bias="0.3"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtContrast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:width="70dp"
+            android:text="@string/text_contrast"
+            android:layout_marginEnd="16dp"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slContrast"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:stepSize="10.0"
+            android:valueFrom="-250.0"
+            android:valueTo="250.0"
+            android:value="0.0"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/slrSaturation"
+        style="?android:attr/buttonBarStyle"
+        app:layout_constraintTop_toBottomOf="@+id/slrContast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtSaturation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/saturation"
+            android:gravity="center"
+            android:width="70dp"
+            android:layout_marginEnd="16dp"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slSaturation"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:stepSize="10.0"
+            android:valueFrom="-250.0"
+            android:valueTo="250.0"
+            android:value="0.0"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/slrGamma"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/slrSaturation"
+        app:layout_constraintVertical_bias="0.3"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtGamma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:width="70dp"
+            android:text="@string/gamma"
+            android:layout_marginEnd="16dp"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slGamma"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:stepSize="0.2"
+            android:valueFrom="0.2"
+            android:valueTo="4"
+            android:value="1.0"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
